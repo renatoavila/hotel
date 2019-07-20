@@ -6,8 +6,8 @@ namespace AppHotel.Domain.Entity
 {
     public class Category : Entity
     {
-        public string Name { get; set; }
-        public Decimal Price { get; set; }
+        public string Name { get; private set; }
+        public Decimal Price { get; private set; }
          
         public Category(string name, decimal price)
         { 

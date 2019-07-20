@@ -7,7 +7,7 @@ namespace AppHotel.Repository.Base
 {
     public abstract class Repository<T> : IRepository<T> where T : IEntity
     {
-        private static List<T> _data;
+        private List<T> _data;
 
         private static object _syncObj = new object();
 
