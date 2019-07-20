@@ -8,5 +8,9 @@ namespace AppHotel.Repository
 {
     public class CategoryRepository : Repository<Category>
     {
+        public Category Get(string value)
+        {
+            return Get().Find(x => x.Name == value);
+        }
     }
 }

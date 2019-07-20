@@ -8,13 +8,11 @@ namespace AppHotel.Domain.Entity
     {
         public string Number { get; private set; }
         public Category Category { get; private set; }
-        public decimal Price { get; private set; }
 
-        public Room(string number, Category category, decimal price)
+        public Room(string number, Category category)
         {
             Number = number;
             Category = category;
-            Price = price; 
         }
     }
 }
