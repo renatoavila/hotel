@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AppHotel.Domain\AppHotel.Domain.csproj" />
-    <ProjectReference Include="..\AppHotel.Repository\AppHotel.Repository.csproj" />
+    <Compile Remove="Interface\**" />
+    <EmbeddedResource Remove="Interface\**" />
+    <None Remove="Interface\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
+    <ProjectReference Include="..\AppHotel.Domain\AppHotel.Domain.csproj" />
+    <ProjectReference Include="..\AppHotel.Repository\AppHotel.Repository.csproj" />
   </ItemGroup>
 
 </Project>
