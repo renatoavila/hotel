@@ -24,12 +24,7 @@ namespace AppHotel.Repository.Test
 
             categories = categoryRepository.Get();
 
-            QuartoRepository quartoRepository = new QuartoRepository();
-
-            Quarto quarto = new Quarto("Teste", 1000, "Xandao", "Xandao 2");
-
-            quartoRepository.Create(quarto);
-            List<Quarto> quartoList = quartoRepository.Get();
+            
         }
     }
 }

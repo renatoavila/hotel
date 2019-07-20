@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AppHotel.Repository
 {
-    public class QuartoRepository : Repository<Quarto>
+    public class RoomRepository : Repository<Room>
     {
     }
 }
