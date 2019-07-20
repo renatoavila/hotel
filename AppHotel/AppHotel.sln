@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppHotel.Business", "AppHot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppHotel.Repository", "AppHotel.Repository\AppHotel.Repository.csproj", "{73A39ACA-31DE-4438-AA94-627FC4ECCB5F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppHotel.Tests", "AppHotel.Tests\AppHotel.Tests.csproj", "{00D1A2D2-FD39-43C8-8D47-EC8683722CF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppHotel.Repository.Test", "AppHotel.Repository.Test\AppHotel.Repository.Test.csproj", "{B439A6FD-76FF-4238-B8E8-C00C0E1EF893}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHotel.Repository.Test", "AppHotel.Repository.Test\AppHotel.Repository.Test.csproj", "{B439A6FD-76FF-4238-B8E8-C00C0E1EF893}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHotel.Business.Test", "AppHotel.Business.Test\AppHotel.Business.Test.csproj", "{157F04DA-1E25-4C42-A237-674CD6C500A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +43,14 @@ Global
 		{73A39ACA-31DE-4438-AA94-627FC4ECCB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73A39ACA-31DE-4438-AA94-627FC4ECCB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73A39ACA-31DE-4438-AA94-627FC4ECCB5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00D1A2D2-FD39-43C8-8D47-EC8683722CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00D1A2D2-FD39-43C8-8D47-EC8683722CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00D1A2D2-FD39-43C8-8D47-EC8683722CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00D1A2D2-FD39-43C8-8D47-EC8683722CF7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B439A6FD-76FF-4238-B8E8-C00C0E1EF893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B439A6FD-76FF-4238-B8E8-C00C0E1EF893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B439A6FD-76FF-4238-B8E8-C00C0E1EF893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B439A6FD-76FF-4238-B8E8-C00C0E1EF893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157F04DA-1E25-4C42-A237-674CD6C500A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157F04DA-1E25-4C42-A237-674CD6C500A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157F04DA-1E25-4C42-A237-674CD6C500A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157F04DA-1E25-4C42-A237-674CD6C500A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,11 +4,7 @@ using System.Text;
 
 namespace AppHotel.Business
 {
-    public class BookingBusinnes
+    class BookingBusinnes
     {
-        public BookingBusinnes()
-        {
-
-        }
     }
 }
