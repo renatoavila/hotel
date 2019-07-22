@@ -1,5 +1,6 @@
 using AppHotel.Domain.Entity;
 using AppHotel.Repository;
+using AppHotel.Repository.Interface;
 using System;
 using System.Collections.Generic;
 using Xunit;
@@ -12,7 +13,7 @@ namespace ApcpHotel.Repository.Test
         public void Full()
         {
             // 1 - cadastro das categorias
-            CategoryRepository categoryRepository = new CategoryRepository();
+            ICategoryRepository categoryRepository = new CategoryRepository();
 
             Category categorySingle = new Category("Single", 230);
             categoryRepository.Create(categorySingle);
@@ -27,7 +28,7 @@ namespace ApcpHotel.Repository.Test
 
             // 2 - cadastro do quarto
 
-            RoomRepository roomRepository = new RoomRepository();
+            IRoomRepository roomRepository = new RoomRepository();
 
             Room roomSingle01 = new Room("01", categorySingle);
             roomRepository.Create(roomSingle01);
@@ -50,7 +51,7 @@ namespace ApcpHotel.Repository.Test
             Assert.True(roomRepository.Get().Count == 6);
 
             // 3 - cadstro do hospede
-            HotelGuestRepository hotelGuestRepositoryRepository = new HotelGuestRepository();
+            IHotelGuestRepository hotelGuestRepositoryRepository = new HotelGuestRepository();
 
             HotelGuest hotelGuest = new HotelGuest("João de Barro","joaobarro@gmail.com", "000.111.222-33","(19) 99999-9999");
             hotelGuestRepositoryRepository.Create(hotelGuest);
@@ -58,7 +59,7 @@ namespace ApcpHotel.Repository.Test
             Assert.True(hotelGuestRepositoryRepository.Get().Count == 1);
 
             // 4 - cadastro da reserva
-            BookingRepository bookingRepository = new BookingRepository();
+            IBookingRepository bookingRepository = new BookingRepository();
 
             Booking booking = new Booking(hotelGuest, DateTime.Now.AddDays(1), DateTime.Now.AddDays(2), roomSingle01);
             bookingRepository.Create(booking);
