@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace AppHotel.Repository.Base
 {
-    public abstract class Repository<T> : IRepository<T> where T : IEntity
+    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : IEntity
     {
-        private List<T> _data;
+        private List<TEntity> _data;
 
         private static object _syncObj = new object();
 
@@ -19,47 +19,47 @@ namespace AppHotel.Repository.Base
                 {
                     if (_data == null)
                     {
-                        _data = new List<T>();
+                        _data = new List<TEntity>();
                     }
                 }
             }
         }
 
-        public T Get(int id)
+        public TEntity Get(int id)
         {
             return _data.Find(x => x.Id == id);
         }
 
-        public T Get(Guid key)
+        public TEntity Get(Guid key)
         {
             return _data.Find(x => x.Key == key);
         }
 
-        public List<T> Get(int skip, int take)
+        public List<TEntity> Get(int skip, int take)
         {
             return _data.Skip(skip).Take(take).ToList();
         }
 
-        public List<T> Get()
+        public List<TEntity> Get()
         {
             return _data;
         }
 
-        public void Create(T obj)
+        public void Create(TEntity entity)
         {
-            _data.Add(obj);
+            _data.Add(entity);
         }
 
-        public void Update(T obj)
+        public void Update(TEntity entity)
         {
-            T old = Get(obj.Key);
-            Delete(old);
-            Create(obj);
+            TEntity oldEntity = Get(entity.Key);
+            Delete(oldEntity);
+            Create(entity);
         }
 
-        public void Delete(T obj)
+        public void Delete(TEntity entity)
         {
-            _data.Remove(obj);
+            _data.Remove(entity);
         }
     }
 }
